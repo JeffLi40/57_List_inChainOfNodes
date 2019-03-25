@@ -45,6 +45,13 @@ public class List_inChainOfNodes{
       }
     }
 
+    //if (headReference == null) return "[,]";
+    //else return toString(headReference);
+    //
+//     public String toString(Node node) {
+//       if (node.getReferenceToNextNode() == null) return node;
+//       else return node + "," + toString(node.getReferenceToNextNode());
+//     }
 
     /**
       Append @value to the head of this list.
