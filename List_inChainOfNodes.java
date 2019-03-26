@@ -26,6 +26,15 @@ public class List_inChainOfNodes{
       }
     }
 
+    public int size() {
+      if (headReference == null) return 0;
+      else return size(headReference);
+    }
+    public int size(Node currentNode) {
+      if (currentNode.getReferenceToNextNode() == null) return 1;
+      else return 1 + size(currentNode.getReferenceToNextNode());
+    }
+
 
      /**
        @return a string representation of this list,
@@ -45,6 +54,14 @@ public class List_inChainOfNodes{
       }
     }
 
+    // public String toString() { //Recursive
+    //   if (headReference == null) return [,];
+    //   else return "[" + toString(headReference) + "]";
+    // }
+    // public String toString(Node currentNode){
+    //   if(currentNode.referenceToNextNode == null) return currentNode;
+    //   else return currentNode + toString(currentNode.referenceToNextNode);
+    // }
 
     /**
       Append @value to the head of this list.
