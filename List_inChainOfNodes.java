@@ -63,4 +63,28 @@ public class List_inChainOfNodes{
         headReference = dummyNode;
         return true;
      }
+     public Node get(int index) {
+        Node currentNode = headReference;
+       for(int i = 0; i < index; i++) {currentNode = currentNode.getReferenceToNextNode();}
+       return currentNode;
+     }
+    public boolean set(int index, Object value) {
+      get(index).cargoReference = value;
+    return true;
+    }
+    public boolean add(int index, Object value) {
+      if(index == size()) {get(index - 1).getReferenceToNextNode() = new Node(value);}
+      else if(index == 0) {addAsHead(value);}
+      else {
+        dummyNode = new Node(value, get(index));
+        get(index - 1).getReferenceToNextNode() = dummyNode;
+      }
+      return true;
+    }
+  public boolean remove(int index){
+    if(index == size() - 1) {get(index) = null;}
+    else if(index == 0) {headReference = get(1);}
+    else get(index - 1).getReferenceToNextNode() = get(index + 1);
+    return true
+  }
 }
