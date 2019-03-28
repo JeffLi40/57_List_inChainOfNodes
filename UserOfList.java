@@ -26,5 +26,14 @@ public class UserOfList {
         }
         System.out.println( "populated list: " + list
                           + System.lineSeparator());
+        System.out.println(list.get(0));
+        System.out.println(list.get(2));
+        list.set(2, "newthing");
+        System.out.println("-------------------------------");
+        System.out.println(list);
+        list.remove(3);
+        System.out.println(list);
+
+
     }
 }
